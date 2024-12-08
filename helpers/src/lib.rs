@@ -1,3 +1,5 @@
+pub mod position;
+
 #[macro_export]
 macro_rules! input_file {
     () => {
