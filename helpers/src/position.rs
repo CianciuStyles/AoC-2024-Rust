@@ -21,9 +21,15 @@ impl Position {
     pub fn get_row(self) -> i32 {
         self.row
     }
-    
+    pub fn get_urow(self) -> usize {
+        usize::try_from(self.row).expect("Invalid value for row")
+    }
+
     pub fn get_col(self) -> i32 {
         self.col
+    }
+    pub fn get_ucol(self) -> usize {
+        usize::try_from(self.col).expect("Invalid value for col")
     }
 
     pub fn is_within_bounds(self, max_rows: usize, max_cols: usize) -> bool {
