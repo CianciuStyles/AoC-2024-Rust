@@ -1,6 +1,6 @@
 use std::ops::{Add, AddAssign, Sub, SubAssign};
 
-#[derive(Eq, PartialEq, Hash, Copy, Clone)]
+#[derive(Eq, PartialEq, Hash, Copy, Clone, Debug)]
 pub struct Position {
     row: i32,
     col: i32,
@@ -37,6 +37,22 @@ impl Position {
             && self.row < i32::try_from(max_rows).expect("Invalid value for max_rows")
             && self.col >= 0
             && self.col < i32::try_from(max_cols).expect("Invalid value for max_cols")
+    }
+
+    pub fn up(self) -> Position {
+        Position::new(self.row - 1, self.col)
+    }
+
+    pub fn down(self) -> Position {
+        Position::new(self.row + 1, self.col)
+    }
+
+    pub fn left(self) -> Position {
+        Position::new(self.row, self.col - 1)
+    }
+
+    pub fn right(self) -> Position {
+        Position::new(self.row, self.col + 1)
     }
 }
 

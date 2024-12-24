@@ -1,4 +1,6 @@
+pub mod direction;
 pub mod position;
+pub mod position_with_direction;
 
 #[macro_export]
 macro_rules! input_file {
