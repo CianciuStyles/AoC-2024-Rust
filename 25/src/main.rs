@@ -51,13 +51,9 @@ fn main() {
     let sample_input = parse_input(sample_text);
     let sample_answer1 = part1(&sample_input);
     assert_eq!(sample_answer1, 3);
-    // let sample_answer2 = part2(&sample_input);
-    // assert_eq!(sample_answer2, 16);
 
     let text = helpers::input_file!();
     let input = parse_input(text);
     let answer1 = part1(&input);
     println!("{answer1}");
-    // let answer2 = part2(&input);
-    // println!("{answer2}");
 }
